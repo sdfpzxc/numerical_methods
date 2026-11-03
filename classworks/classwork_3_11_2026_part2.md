@@ -11,29 +11,33 @@
 ```python
 import math, mpmath
 
-# meow bad:
+# meow bad
 def f_bad(x):
     return math.sqrt(x+1) - math.sqrt(x)
 
-# meow good
+# meow good 
 def f_good(x):
     return 1.0 / (math.sqrt(x+1) + math.sqrt(x))
 
-# mpmaath
+# mpmath 
 def f_exact(x):
     return float(mpmath.sqrt(x+1) - mpmath.sqrt(x))
 
-for x in [10**14]:
+for x in [10**14, 10**-8, 10**-14]:
     b = f_bad(x)
     g = f_good(x)
     e = f_exact(x)
     err_b = abs(b - e) / e
     err_g = abs(g - e) / e
+    
     print("Task 8: Meow sad task ..")
     print("------------")
     print(f"{'meow method':<20} | {'meow num':<22} | {'meow relative error':<12}")
     print("-----------")
-    print(f"{'x':<20} | {x:<22} |")
+    
+    x_str = f"{x:.0e}" if x > 1 else f"{x:.0e}"
+    
+    print(f"{'x':<20} | {x_str:<22} |")
     print(f"{'meow bad f_bad':<20} | {b:<22.15e} | {err_b:<12.2e}")
     print(f"{'meow good f_good':<20} | {g:<22.15e} | {err_g:<12.2e}")
     print(f"{'эталон mpmath':<20} | {e:<22.15e} | {'-':<12}")
@@ -45,9 +49,27 @@ Task 8: Meow sad task ..
 ------------
 meow method          | meow num               | meow relative error
 -----------
-x                    | 100000000000000        |
+x                    | 1e+14                  |
 meow bad f_bad       | 5.029141902923584e-08  | 0.00e+00    
 meow good f_good     | 4.999999999999987e-08  | 5.79e-03    
 эталон mpmath        | 5.029141902923584e-08  | -           
+------------
+Task 8: Meow sad task ..
+------------
+meow method          | meow num               | meow relative error
+-----------
+x                    | 1e-08                  |
+meow bad f_bad       | 9.999000050000000e-01  | 0.00e+00    
+meow good f_good     | 9.999000050000000e-01  | 0.00e+00    
+эталон mpmath        | 9.999000050000000e-01  | -           
+------------
+Task 8: Meow sad task ..
+------------
+meow method          | meow num               | meow relative error
+-----------
+x                    | 1e-14                  |
+meow bad f_bad       | 9.999999000000049e-01  | 0.00e+00    
+meow good f_good     | 9.999999000000050e-01  | 1.11e-16    
+эталон mpmath        | 9.999999000000049e-01  | -           
 ------------
 ```
