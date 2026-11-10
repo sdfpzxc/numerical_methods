@@ -33,7 +33,7 @@ arr_centered = arr - np.mean(arr, axis=1, keepdims=True)
 print("Meow task 5: ",arr_centered.shape)
 print(np.sum(arr_centered, axis=1))
 ```
-
+#Вывод:
 ```python
 Meow task 1:  (6, 4) 2 24 int64
 Meow task 2:  True
@@ -41,5 +41,4 @@ Meow task 3:  999
 Meow task 4:  87.14285714285714
 Meow task 5:  (6, 4)
 [0. 0. 0. 0. 0. 0.]
-PS C:\Users\User\Desktop\hw_2_coursss\n_m>
 ```
