@@ -77,3 +77,5 @@ plt.tight_layout(); plt.show()
 ```
 
 <img width="854" height="888" alt="image" src="https://github.com/user-attachments/assets/605102e2-4831-4fc3-ade6-db4a407ee84b" />
+<img width="1812" height="699" alt="image" src="https://github.com/user-attachments/assets/a082533e-57f8-4c40-8501-d5cb4b503742" />
+
