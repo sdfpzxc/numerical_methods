@@ -186,4 +186,6 @@ map + lambda                         4.05                 44.18                 
 (в) map + lambda медленнее из-за накладных расходов на вызов lambda
     для каждого элемента; ручной цикл с append — где-то посередине
 ```
+<img width="709" height="591" alt="image" src="https://github.com/user-attachments/assets/e7bbc6b4-0951-42ad-9b21-2c259000db56" />
+<img width="1335" height="617" alt="image" src="https://github.com/user-attachments/assets/337b30ea-75f2-4906-a9b7-e480cf532c16" />
 
